@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="../js/jquery/2.0.0/jquery.min.js" ></script>
+		<link rel="stylesheet" href="../css/bootstrap/3.3.6/bootstrap.min.css" />
+		<script type="text/javascript" src="../js/bootstrap/3.3.6/bootstrap.min.js" ></script>
+	</head>
+	
+	<style>
+		body{
+			font-size:12px;
+			font-family: arial;
+		}
+		div.productReviewDiv{
+			width:790px;
+			margin:40px auto;
+		}
+		div.productReviewTopPart{
+			border:1px solid #DFDFDF;
+		}
+		a.productReviewTopPartSelectedLink{
+			padding:0px 20px;
+			color:#333333;
+		}
+		a.selected{
+			border-left:1px solid #cfbfb1;
+			border-right:1px solid #cfbfb1;
+			color:#b10000;
+			display:inline-block;
+			font-weight: bold;
+			line-height: 46px;
+			width:90px;
+			text-align:center;
+			position:relative;
+		}
+		a.selected:before{
+			content:"";
+			display:block;
+			border-width: 1px;
+			border-style: solid;
+			border-color:#B00000;
+			width:90px;
+			height:0;
+			position: absolute;
+			top:-1px;
+			margin-left:-1px;
+		}
+		a.selected:after{
+			content:"";
+			display: block;
+			border-color:#B00000 transparent transparent;
+			border-style:solid;
+			border-width:5px;
+			width:0;
+			height:0;
+			position:absolute;
+			top:-1px;
+			left:50%;
+			margin-left:-5px;
+		}
+		div.ProductReviewContentPart{
+			padding-top:50px;
+		}
+		div.productReviewItem{
+			border-bottom:1px solid #E3E3E3;
+			margin:10px 0px;
+		}
+		div.productReviewItemDesc{
+			display:inline-block;
+			width:80%;
+			color:#333333;
+			margin:5px 20px;
+			float:left;
+		}
+		div.productReviewItemContent{
+			padding-right:15px;
+		}
+		div.productReviewItemUserInfo{
+			color:#404040;
+			margin:5px 20px;
+			padding:20px 0px;
+		}
+		div.productReviewItemDate{
+			color:#CCCCCC;
+			margin-top:15px;
+		}
+		div.productReviewItemUserInfo span{
+			color:#999999;
+		}
+		a:hover{
+			color:#C40000;
+			text-decoration: none;
+		}
+	</style>
+	
+	<body>
+		<div class="productPageDiv">
+			<div class="productReviewDiv" style="display:block;">
+				<div class="productReviewTopPart">
+				    <a href="#nowhere" class="productReviewTopPartSelectedLink">商品详情</a>
+				    <a href="#nowhere" class="selected">累计评价<span class="number"> 19</span></a>
+			    </div>
+			    <div class="ProductReviewContentPart">
+				<div class="productReviewItem">
+					<div class="productReviewItemDesc">
+						<div class="productReviewItemContent">
+							不错的购物，包装很精细，布料也不错舒服，因为之前一直购买品牌装，很好的一次网购体验
+						</div>
+						<div class="productReviewItemDate">2016-08-10</div>
+					</div>
+					<div class="productReviewItemUserInfo">
+						哀****莉<span class="userInfoGrayPart">(匿名)</span>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+				<div class="productReviewItem">
+					<div class="productReviewItemDesc">
+						<div class="productReviewItemContent">
+							非常喜欢这款运动版，卖家发货也很快，用的顺丰 年货节加购了一个金属表链很是划算 非常喜欢这种手环＋蓝牙耳机的设计 不过不像普通的蓝牙耳机好挂在耳朵上 音质的话，比手机听筒稍差一点点
+						</div>
+						<div class="productReviewItemDate">2016-08-23</div>
+					</div>
+					<div class="productReviewItemUserInfo">
+						欧***1<span class="userInfoGrayPart">(匿名)</span>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+				<div class="productReviewItem">
+					<div class="productReviewItemDesc">
+						<div class="productReviewItemContent">
+							非常好的一个宝贝，已经第二次买了，头一个不小心弄丢了，操作非常简单，绑定手机后按两边侧键，弹出后直接挂耳朵上通话，并且可以同时绑定多步手机，太方便了，更主要的是闹钟可以在早上把我叫醒，有了这个宝贝后我上班没再迟到过?
+						</div>
+						<div class="productReviewItemDate">2016-08-10</div>
+					</div>
+					<div class="productReviewItemUserInfo">
+						t***5<span class="userInfoGrayPart">(匿名)</span>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+				<div class="productReviewItem">
+					<div class="productReviewItemDesc">
+						<div class="productReviewItemContent">
+							看起来不错，音质很好
+						</div>
+						<div class="productReviewItemDate">2016-08-10</div>
+					</div>
+					<div class="productReviewItemUserInfo">
+						z***n<span class="userInfoGrayPart">(匿名)</span>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+				<div class="productReviewItem">
+					<div class="productReviewItemDesc">
+						<div class="productReviewItemContent">
+							先满分，给领导的，我也没看见好不好，应该没问题，等问问再来评价
+						</div>
+						<div class="productReviewItemDate">2016-08-10</div>
+					</div>
+					<div class="productReviewItemUserInfo">
+						m***9<span class="userInfoGrayPart">(匿名)</span>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+				<div class="productReviewItem">
+					<div class="productReviewItemDesc">
+						<div class="productReviewItemContent">
+							用了一个星期了，很好用。开车时特别实用，音质也很好，电池也很耐用
+						</div>
+						<div class="productReviewItemDate">2016-08-10</div>
+					</div>
+					<div class="productReviewItemUserInfo">
+						c***8<span class="userInfoGrayPart">(匿名)</span>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+				<div class="productReviewItem">
+					<div class="productReviewItemDesc">
+						<div class="productReviewItemContent">
+							用了半个月，已经通话质量太差，出现滋滋啦啦链接问题出现！！！通话质量不行那性价比就还不如最普通手环了！！
+						</div>
+						<div class="productReviewItemDate">2016-08-10</div>
+					</div>
+					<div class="productReviewItemUserInfo">
+						q***6<span class="userInfoGrayPart">(匿名)</span>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+				<div class="productReviewItem">
+					<div class="productReviewItemDesc">
+						<div class="productReviewItemContent">
+							感觉还是挺好的
+						</div>
+						<div class="productReviewItemDate">2016-08-10</div>
+					</div>
+					<div class="productReviewItemUserInfo">
+						他***m<span class="userInfoGrayPart">(匿名)</span>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+				<div class="productReviewItem">
+					<div class="productReviewItemDesc">
+						<div class="productReviewItemContent">
+							若干次购买，价格恒定，好似涨了些，帮朋友买的，说好。还要再选一个，老板要优惠哦
+						</div>
+						<div class="productReviewItemDate">2016-08-10</div>
+					</div>
+					<div class="productReviewItemUserInfo">
+						如***9<span class="userInfoGrayPart">(匿名)</span>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+				<div class="productReviewItem">
+					<div class="productReviewItemDesc">
+						<div class="productReviewItemContent">
+							宝贝收到了，很喜欢，按照说明下载了华为穿戴，华为运动，连了蓝牙，已经使用了，非常棒！赞一个！
+						</div>
+						<div class="productReviewItemDate">2016-08-10</div>
+					</div>
+					<div class="productReviewItemUserInfo">
+						任***6<span class="userInfoGrayPart">(匿名)</span>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+				<div class="productReviewItem">
+					<div class="productReviewItemDesc">
+						<div class="productReviewItemContent">
+							第一次自己挣的钱，送老公的礼物，真的非常好，超满意，回来调试好就戴着出门了！钢链和皮带质量也非常好，开车接电话太方便了！不会再有安全隐患了！可以放心了！等他回来再来追加图片！
+						</div>
+						<div class="productReviewItemDate">2016-08-10</div>
+					</div>
+					<div class="productReviewItemUserInfo">
+						h***g<span class="userInfoGrayPart">(匿名)</span>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+				<div class="productReviewItem">
+					<div class="productReviewItemDesc">
+						<div class="productReviewItemContent">
+							目前各方面使用都正常 挺好用的
+						</div>
+						<div class="productReviewItemDate">2016-08-10</div>
+					</div>
+					<div class="productReviewItemUserInfo">
+						m***德<span class="userInfoGrayPart">(匿名)</span>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+				<div class="productReviewItem">
+					<div class="productReviewItemDesc">
+						<div class="productReviewItemContent">
+							独特的设计真的很酷，很方便很好用，给力。
+						</div>
+						<div class="productReviewItemDate">2016-08-10</div>
+					</div>
+					<div class="productReviewItemUserInfo">
+						h***0<span class="userInfoGrayPart">(匿名)</span>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+				<div class="productReviewItem">
+					<div class="productReviewItemDesc">
+						<div class="productReviewItemContent">
+							宝贝很上档次，运动耳机也很好。尤其是顺丰快递很不错，虽然大雪造成路上高速延迟，电话咨询后，服务人员及时给予反馈，而且省城零点分发，早起8点送件，并表示歉意，总部电话确认，很感动。
+						</div>
+						<div class="productReviewItemDate">2016-08-10</div>
+					</div>
+					<div class="productReviewItemUserInfo">
+						k***9<span class="userInfoGrayPart">(匿名)</span>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+				<div class="productReviewItem">
+					<div class="productReviewItemDesc">
+						<div class="productReviewItemContent">
+							很不错的一次购物，送给父亲的礼物，实用。
+						</div>
+						<div class="productReviewItemDate">2016-08-10</div>
+					</div>
+					<div class="productReviewItemUserInfo">
+						m***1<span class="userInfoGrayPart">(匿名)</span>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+				<div class="productReviewItem">
+					<div class="productReviewItemDesc">
+						<div class="productReviewItemContent">
+							刚收到，挺好的～买给父母的，希望他们身体健康常运动
+						</div>
+						<div class="productReviewItemDate">2016-08-10</div>
+					</div>
+					<div class="productReviewItemUserInfo">
+						鬼***稀<span class="userInfoGrayPart">(匿名)</span>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</body>
+</html>

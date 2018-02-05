@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="../js/jquery/2.0.0/jquery.min.js" ></script>
+		<link rel="stylesheet" href="../css/bootstrap/3.3.6/bootstrap.min.css" />
+		<script type="text/javascript" src="../js/bootstrap/3.3.6/bootstrap.min.js" ></script>
+	</head>
+	
+	<style>
+		div.imgAndInfo{
+			margin:40px 20px;
+		}
+		div.imgInimgAndInfo{
+			float:left;
+		}
+		div.imgAndInfo img.bigImg{
+			width:400px;
+			height:400px;
+			padding:20px;
+			border:1px solid #F2F2F2;
+		}
+		div.imgAndInfo div.smallImageDiv{
+			margin-left:40px;
+		}
+		div.imgAndInfo img.smallImg{
+			width:60px;
+			height:60px;
+			border:2px solid white;
+		}
+		div.imgAndInfo img.smallImg:hover{
+			border-color: black;
+		}
+	</style>
+	
+	<style>
+		body{
+			font-size:12px;
+			font-family: Arial;
+		}
+		div.infoInimgAndInfo{
+			position:absolute;
+			left:430px;
+		}
+		div.productTitle{
+			color:black;
+			font-size:16px;
+			font-weight:bold;
+			margin:0px 10px;
+		}
+		div.productSubTitle{
+			color:#DD2727;
+			font-size:12px;
+			margin:0px 10px;
+		}
+		div.productPrice{
+			margin-top:4px;
+		}
+		div.productPrice div.juhuasuan{
+			width:800px;
+			height:40px;
+			background-color:#2DA77A;
+			color:white;
+			text-align:center;
+			margin-top:10px;
+			line-height: 40px;
+		}
+		
+		div.juhuasuan span.juhuasuanBig{
+			font-size:18px;
+			font-weight: bold;
+			font-family: "黑体";
+		}
+		div.juhuasuan span.juhuasuanTime{
+			color:#FFC057;
+			font-weight: bold;
+		}
+		div.gouwuDiv{
+			height:102px;
+			padding:10px;
+			color:#666666;
+			background-image: url(../img/site/priceBackground.png);
+		}
+		div.gouwuDiv div.gouwuquan{
+			margin-top:5px;
+		}
+		div.gouwuDiv div.gouwuquan img{
+			width:65px;
+			height:20px;
+		}
+		div.gouwuDiv div.price{
+			margin-top:5px;
+		}
+		div.price span.originalPriceDesc{
+			color:#999999;
+			display: inline-block;
+			width:68px;
+		}
+		div.price span.huaxian{
+			color:#333333;
+			text-decoration:line-through;
+		}
+		div.price span.promotionPriceDesc{
+			color:#999999;
+			display:inline-block;
+			width:68px;
+			position:relative;
+			left:0px;
+			top:-10px;
+		}
+		div.price span.promotionPriceYuan{
+			font-size:18px;
+			color:#C40000;
+		}
+		div.price span.promotionPrice{
+			color:#C40000;
+			font-size:30px;
+			font-weight: bold;
+		}
+		div.sales{
+			margin:20px 0px;
+			padding:10px;
+			border-top-style: dotted;
+			border-top-width: 1px;
+			border-top-color: #C9C9C9;
+			border-bottom-style: dotted;
+			border-bottom-width: 1px;
+			border-bottom-color: #C9C9C9;
+		}
+		div.sales div{
+			display: inline-block;
+			width:49%;
+			text-align: center;
+			color:#999999;
+		}
+		div.sales div.first-child{
+			border-right-style:solid ;
+			border-right-width: 1px;
+			border-right-color:#E5DFDA;
+		}
+		div.count{
+			color:#999999;
+		}
+		div.count span.glyphicon{
+			font-size:6px;
+		}
+		div.count span.updown{
+			border:1px solid #999999;
+			display:block;
+			width:20px;
+			height: 14px;
+			text-align: center;
+			padding-top: 3px;
+		}
+		div.count span.undownMiddle{
+			height:4px;
+			display:block;
+		}
+		div.count span.arrow{
+			display: inline-block;
+			width:22px;
+			height:32px;
+			position:relative;
+			top:8px;
+		}
+		div.count span.numberSettiong{
+			border:1px solid #999999;
+			display:inline-block;
+			width:43px;
+			height:32px;
+			padding:6px 0px;
+		}
+		div.count span.numberSettiong input{
+			border:0px;
+			width:80%;
+			height:80%;
+		}
+		.redColor{
+			color:#C40000;
+		}
+		.boldWord{
+			font-weight: bold;
+		}
+		div.serviceCommitment{
+			margin:20px 0px;
+		}
+		div.serviceCommitment span{
+			color:#999999;
+		}
+		div.serviceCommitment a{
+			color:#666666;
+		}
+		div.serviceCommitment a:hover{
+			text-decoration: none;
+		}
+		div.buyDiv{
+			margin:20px auto;
+			text-align: center;
+		}
+		div.buyDiv button{
+			display: inline-block;
+			margin:0px 10px;
+			width:180px;
+			height:40px;
+		}
+		button.buyButton{
+			border:1px solid #C40000;
+			background-color: #FFEDED;
+			text-align:center;
+			line-height:40px;
+			font-size:16px;
+			color:#C40000;
+			font-family: arial;
+		}
+		button.cartButton{
+			border:1px solid #C40000;
+			background-color:#C40000;
+			text-align: center;
+			line-height:40px;
+			font-size:16px;
+			color:white;
+			font-family: arial;
+		}
+		button.cartButton span.glyphicon{
+			font-size:12px;
+			margin-right:8px;
+		}
+	</style>
+	
+	<script>
+		$(function(){
+			$("img.smallImg").mouseenter(function(){
+			var bigImageURL = $(this).attr("bigImageURL");
+			$("img.bigImg").attr("src",bigImageURL);
+		    });
+		    $("img.bigImg").load(function(){
+			    $("img.smallImg").each(functiion(){
+				var bigImageURL = $(this).attr("bigImageURL");
+				img = new Image();
+				img.src = bigImageURL;
+				img.onload = function(){
+					console.log(bigImageURL);
+					$("div.img4load").append($(img));
+				    };
+			    });
+		    });
+		});
+	</script>
+	
+<script>
+  
+$(function(){
+    var stock = 66;
+    $(".productNumberSetting").keyup(function(){
+        var num= $(".productNumberSetting").val();
+        num = parseInt(num);
+        if(isNaN(num))
+            num= 1;
+        if(num<=0)
+            num = 1;
+        if(num>stock)
+            num = stock;
+        $(".productNumberSetting").val(num);
+    });
+      
+    $(".increaseNumber").click(function(){
+        var num= $(".productNumberSetting").val();
+        num++;
+        if(num>stock)
+            num = stock;
+        $(".productNumberSetting").val(num);
+    });
+    $(".decreaseNumber").click(function(){
+        var num= $(".productNumberSetting").val();
+        --num;
+        if(num<=0)
+            num=1;
+        $(".productNumberSetting").val(num);
+    });
+      
+});
+  
+</script>
+	
+	<body>
+		<div class="imgAndInfo">
+			<div class="imgInimgAndInfo">
+				<img src="../img/products/8619.jpg" class="bigImg">
+			<div class="smallImageDiv">
+				<img src="../img/products/8616.jpg" class="smallImg" bigImageURL="../img/products/8616 (1).jpg">
+				<img src="../img/products/8617.jpg" class="smallImg" bigImageURL="../img/products/8617 (1).jpg">
+				<img src="../img/products/8618.jpg" class="smallImg" bigImageURL="../img/products/8618 (1).jpg">
+				<img src="../img/products/8619 (1).jpg" class="smallImg" bigImageURL="../img/products/8619 (2).jpg">
+				<img src="../img/products/8620.jpg" class="smallImg" bigImageURL="../img/products/8620 (2).jpg">
+			</div>
+			<div class="img4load hidden"></div>
+			</div>
+			
+			<div class="infoInimgAndInfo">
+				<div class="productTitle">名媛2016新款女装夏两件套裤韩版雪纺七分裤阔腿裤休闲时尚套装女</div>
+				<div class="productSubTitle">高端定制 高档棉麻 现货即发 加购物车 领优惠券</div>
+				<div class="productPrice">
+					<div class="juhuasuan">
+						<span class="juhuasuanBig">聚划算</span>
+						此商品即将参加聚划算，
+						<span class="juhuasuanTime">1天19小时</span>
+						后开始，
+					</div>
+					<div class="gouwuDiv">
+						<div class="gouwuquan">
+							<a href="#nowhere"><img src="../img/products/gouwujuan.png"/></a>
+							全天猫实物商品通用
+						</div>
+						<div class="price"><span class="priceSpan originalPriceDesc">价格</span><span class="huaxian originalPriceDesc">￥399.00</span></div>
+						<div class="price"><span class="priceSpan promotionPriceDesc">促销价</span><span class="promotionPriceYuan promotionPriceDesc">￥<span class="promotionPrice">379.05</span></span></div>
+					</div>
+					<div class="sales">
+						<div class="first-child"><span>销量</span><span class="redColor boldWord"> 50</span></div>
+						<div><span>累计评价</span><span  class="redColor boldWord"> 19</span></div>
+					</div>
+					<div class="count">
+						<span>数量</span>
+						<span class="numberSettiong"><input type="text" placeholder="1" class="productNumberSetting"></span>
+						<span class="arrow">
+							<a href="#nowhere" class="increaseNumber"><span class="glyphicon glyphicon-arrow-up updown"></span></a>
+                            <span class="undownMiddle"></span>
+						    <a href="#nowhere" class="decreaseNumber"><span class="glyphicon glyphicon-arrow-down updown"></span></a>
+						</span>
+                        
+						<span>件 库存66件</span>
+					</div>
+					<div class="serviceCommitment">
+						<span>服务承诺</span>
+						<a href="#nowhere">正品保证</a>
+						<a href="#nowhere">极速退款</a>
+						<a href="#nowhere">赠运费险</a>
+						<a href="#nowhere">七天无理由退款</a>
+					</div>
+					<div class="buyDiv">
+						<button class="buyButton">立即购买</button>
+						<button class="cartButton"><span class="glyphicon glyphicon-shopping-cart"></span><span>加入购物车</span></button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>
