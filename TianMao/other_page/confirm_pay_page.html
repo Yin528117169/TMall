@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="../js/jquery/2.0.0/jquery.min.js" ></script>
+		<link rel="stylesheet" href="../css/bootstrap/3.3.6/bootstrap.min.css" />
+		<script type="text/javascript" src="../js/bootstrap/3.3.6/bootstrap.min.js" ></script>
+	</head>
+	
+	<style>
+		body,table{
+			font-size:12px;
+			font-family: arial;
+		}
+		div.confirmPayPageDiv{
+			max-width: 1013px;
+			margin: 10px auto;
+		}
+		div.confirmPayImageDiv{
+			margin:5px auto 80px auto;
+			width:900px;
+			position:relative;
+		}
+		div.confirmPayImageDiv div{
+			color:#999999;
+		}
+		div.confirmPayTime3{
+			position:absolute;
+			top:100px;
+			left:400px;
+		}
+		div.confirmPayTime2{
+			position:absolute;
+			top: 100px;
+			left: 190px;
+		}
+		div.confirmPayTime1{
+			position:absolute;
+			top: 100px;
+			left: -20px;
+		}
+		div.confirmPayOrderInfoText{
+			margin:10px 10px 0px 10px;
+			font-size: 16px;
+			font-weight: bold;
+			color: black;
+			padding-bottom: 15px;
+			border-bottom: 1px solid #ADC8E6;
+		}
+		div.confirmPayOrderItemDiv{
+			margin:0px 20px;
+		}
+		div.confirmPayOrderItemText{
+			margin:20px 10px;
+			font-size: 14px;
+			font-weight: normal;
+			color: black;
+		}
+		table.confirmPayOrderItemTable{
+			border:1px solid #DDDDDD;
+			width:100%;
+		}
+		table.confirmPayOrderItemTable thead{
+			background-color: #E8F2FF;
+			height:33px;
+		}
+		table.confirmPayOrderItemTable thead{
+			background-color: #E8F2FF;
+			height: 33px;
+		}
+		table.confirmPayOrderItemTable tr{
+			border:1px solid #DDDDDD;
+		}
+		table.confirmPayOrderItemTable th,table.confirmPayOrderItemTable td{
+			text-align: center;
+		}
+		table.confirmPayOrderItemTable td{
+			padding:20px;
+		}
+		td.confirmPayOrderItemProductLink{
+			text-align: left;
+		}
+		span.confirmPayProductPrice{
+			font-size: 18px;
+			font-weight: bold;
+			color: #666666;
+		}
+		span.confirmPayOrderItemSumPrice{
+			color:#C40000;
+		}
+		a{
+			color:#999999;
+		}
+		a:hover{
+			text-decoration: none;
+			color:#C40000;
+		}
+	</style>
+	<style>
+		div.confirmPayOrderDetailDiv{
+			margin:40px;
+			padding-top: 20px;
+		}
+		div.confirmPayOrderDetailTable{
+			width:100%;
+			border-top:1px solid #DDDDDD;
+		}
+		table.confirmPayOrderDetailTable{
+			width:100%;
+			border-top:1px solid #DDDDDD;
+		}
+		table.confirmPayOrderDetailTable td{
+			padding:8px;
+			color:black;
+			font-size: 14px;
+		}
+		span.wangwangGif{
+			display: inline-block;
+			width: 67px;
+			height: 22px;
+			background-image: url(../img/site/wangwang.gif);
+			background-repeat: no-repeat;
+			background-color: transparent;
+			position: relative;
+			left: 2px;
+		}
+		div.confirmPayButtonDiv{
+			border:1px solid #F58B0D;
+			margin:20px;
+		}
+		div.confirmPayWarning{
+			margin: 20px 80px;
+			font-size: 18px;
+			color: red;
+			font-weight: bold;
+		}
+		button.confirmPayButton{
+			margin: 20px 80px;
+			width: 67px;
+			height:30px;
+			border:1px solid #E67C00;
+			background-color: #F4A21D;
+			color:white;
+			font-size: 12px;
+		}
+		button.confirmPayButton:hover{
+			background-color:#F6AE30;
+		}
+	</style>
+	
+	<body>
+		<div class="confirmPayPageDiv">
+			<div class="confirmPayImageDiv">
+				<img src="../img/site/comformPayFlow.png"/>
+				<div class="confirmPayTime1">2018-01-20 12:21:35</div>
+				<div class="confirmPayTime2">2018-01-21 15:45:53</div>
+				<div class="confirmPayTime3">2018-01-23 08:38:41</div>
+			</div>
+		</div>
+		<div class="confirmPayOrderInfoDiv">
+			<div class="confirmPayOrderInfoText">我已收到货，同意支付宝付款</div>
+		</div>
+		<div class="confirmPayOrderItemDiv">
+			<div class="confirmPayOrderItemText">订单信息</div>
+			<table class="confirmPayOrderItemTable">
+				<thead>
+					<tr>
+						<th colspan="2">宝贝</th>
+						<th width="120px">单价</th>
+						<th width="120px">数量</th>
+						<th width="120px">商品总价</th>
+						<th width="120px">运费</th>
+					</tr>
+					<tbody>
+						<tr>
+							<td><img src="../img/products/5848.jpg" width="50px"/></td>
+							<td class="confirmPayOrderItemProductLink">
+								<a href="#nowhere">罗宾 钢带女表 女士腕表 水钻夜光防水石英表 潮流时尚复古手表女</a>
+							</td>
+							<td>￥990.00</td>
+							<td>1</td>
+							<td class="confirmPayProductPrice">
+								<span>￥792.00</span>
+							</td>
+							<td>
+								<span>快递：0.00</span>
+							</td>
+						</tr>
+						<tr>
+							<td><img src="../img/products/3676.jpg" width="50px"/></td>
+							<td class="confirmPayOrderItemProductLink">
+								<a href="#nowhere">科沃斯地宝凌云扫地机器人WiFi智能家用吸尘器超薄全自动洗擦机</a>
+							</td>
+							<td>￥5,680.00</td>
+							<td>1</td>
+							<td class="confirmPayProductPrice">
+								<span>￥3,692.00</span>
+							</td>
+							<td>
+								<span>快递：0.00</span>
+							</td>
+						</tr>
+					</tbody>
+				</thead>
+			</table>
+			<div class="confirmPayOrderItemText pull-right">
+				实付款：<span class="confirmPayOrderItemSumPrice">￥4,484.00</span>
+			</div>
+			
+			<div class="confirmPayOrderDetailDiv">
+				<table class="confirmPayOrderDetailTable">
+					<tbody>
+						<tr>
+							<td>订单编号:</td>
+							<td>264565478654324156<img src="../img/site/confirmOrderTmall.png" width="23px"/></td>
+						</tr>
+						<tr>
+							<td>卖家昵称:</td>
+							<td>天猫商城<span class="wangwangGif"></span></td>
+						</tr>
+						<tr>
+							<td>收货信息:</td>
+							<td>东莞市 XX区XX街XX号，1853554862,45321</td>
+						</tr>
+						<tr>
+							<td>成交时间:</td>
+							<td>2018-2-13 12:32:14</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="confirmPayButtonDiv">
+							<div class="confirmPayWarning">请收到货后，再确认收货！否则您可能钱货两空！</div>
+							<a href="#nowhere">
+								<button class="confirmPayButton">确认支付</button>
+							</a>
+					</div>
+			</div>
+			
+		</div>
+	</body>
+</html>
